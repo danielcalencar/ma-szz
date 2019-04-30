@@ -1,0 +1,66 @@
+Manifest-Version: 1.0
+Class-Path: . ./szz_lib/activation-1.1.jar ./szz_lib/antlr-run
+ time-3.4.jar ./szz_lib/c3p0-0.9.1.jar ./szz_lib/cal10n-api-0.
+ 7.4.jar ./szz_lib/commons-codec-1.4.jar ./szz_lib/commons-col
+ lections-2.0.jar ./szz_lib/commons-httpclient-3.0.1.jar linemodel
+ _lib/commons-io-2.3.jar ./szz_lib/commons-logging-1.1.1.jar linem
+ odel_lib/dom4j-1.6.1.jar ./szz_lib/hibernate-c3p0-4.1.5.Final.jar
+  ./szz_lib/hibernate-commons-annotations-4.0.1.Final.jar linemode
+ l_lib/hibernate-core-4.1.5.Final.jar ./szz_lib/hibernate-jpa-2.0-
+ api-1.0.1.Final.jar ./szz_lib/j2bugzilla-2.1.1.jar ./szz_lib/
+ jackson-core-asl-1.5.5.jar ./szz_lib/jackson-jaxrs-1.5.5.jar line
+ model_lib/jackson-mapper-asl-1.5.5.jar ./szz_lib/jackson-xc-1.5.5
+ .jar ./szz_lib/javaparser-1.0.8.jar ./szz_lib/javassist-3.15.
+ 0-GA.jar ./szz_lib/jaxb-api-2.2.2.jar ./szz_lib/jaxb-impl-2.2
+ .3.jar ./szz_lib/jboss-logging-3.1.0.GA.jar ./szz_lib/jboss-t
+ ransaction-api_1.1_spec-1.0.0.Final.jar ./szz_lib/jdom-1.1.jar li
+ nemodel_lib/jersey-apache-client-1.5.jar ./szz_lib/jersey-client-
+ 1.5.jar ./szz_lib/jersey-core-1.5.jar ./szz_lib/jersey-json-1
+ .5.jar ./szz_lib/jersey-multipart-1.5.jar ./szz_lib/jettison-
+ 1.1.jar ./szz_lib/jira-rest-java-client-0.5.jar ./szz_lib/jna
+ -3.4.0.jar ./szz_lib/joda-time-2.2.jar ./szz_lib/jsoup-1.7.2.
+ jar ./szz_lib/jul-to-slf4j-1.6.4.jar ./szz_lib/junit-3.8.1.ja
+ r ./szz_lib/log4j-1.2.16.jar ./szz_lib/mimepull-1.4.jar linem
+ odel_lib/mysql-connector-java-5.1.6.jar ./szz_lib/oauth-client-1.
+ 5.jar ./szz_lib/oauth-signature-1.5.jar ./szz_lib/OpenXES-1.5
+ .jar ./szz_lib/OpenXES-XStream-1.5.jar ./szz_lib/postgresql-9
+ .0-801.jdbc4.jar ./szz_lib/sequence-library-1.0.2.jar linemodel_l
+ ib/slf4j-api-1.6.4.jar ./szz_lib/slf4j-ext-1.6.4.jar linemodel_li
+ b/slf4j-log4j12-1.6.4.jar ./szz_lib/slf4j-migrator-1.6.4.jar line
+ model_lib/Spex-1.5.jar ./szz_lib/sqljet-1.1.5.jar ./szz_lib/s
+ tax-api-1.0-2.jar ./szz_lib/stax-api-1.0.1.jar ./szz_lib/svn-
+ javahl-api-1.7.6.jar ./szz_lib/svnkit-1.7.6.jar ./szz_lib/svn
+ kit-cli-1.7.6-SNAPSHOT.jar ./szz_lib/svnkit-javahl16-1.7.6.jar li
+ nemodel_lib/svnkit-osgi-1.7.6.jar ./szz_lib/trilead-ssh2-1.0.0-bu
+ ild215.jar ./szz_lib/ws-commons-util-1.0.2.jar ./szz_lib/xml-
+ apis-1.0.b2.jar ./szz_lib/xmlrpc-1.1.1.jar ./szz_lib/xmlrpc-c
+ lient-3.1.3.jar ./szz_lib/xmlrpc-common-3.1.3.jar ./szz_lib/x
+ pp3_min-1.1.4c.jar ./szz_lib/xstream-1.3.1.jar ./szz_lib/org.
+ eclipse.egit.github.core-2.1.5.jar ./szz_lib/gson-2.2.4.jar linem
+ odel_lib/antlr-2.7.5H3.jar ./szz_lib/mongo-java-driver-2.11.3.jar
+  ./szz_lib/junit.jar ./szz_lib/org.hamcrest.core_1.3.0.v20130
+ 3031735.jar ./szz_lib/java-super-parser.jar ./szz_lib/core-3.
+ 3.8.201211290939.jar ./szz_lib/diffutils-1.2.1-sources.jar linemo
+ del_lib/diffutils-1.2.1.jar ./szz_lib/hibernate-core-4.1.5.SP1-so
+ urces.jar ./szz_lib/commons-math3-3.2.jar ./szz_lib/guava-16.
+ 0.1.jar ./szz_lib/sqlite-jdbc-3.6.0.jar ./szz_lib/commons-mat
+ h3-3.2-javadoc.jar ./szz_lib/commons-math3-3.2-sources.jar linemo
+ del_lib/junit_2.jar ./szz_lib/org.hamcrest.core_1.3.0.v2013030317
+ 35_2.jar ./szz_lib/xmlrpc-client-3.1.3-sources.jar ./szz_lib/
+ jiraissue.jar ./szz_lib/xbean.jar ./szz_lib/guava-r06.jar lin
+ emodel_lib/concurrentlinkedhashmap-lru-1.3.1.jar ./szz_lib/geroni
+ mo-jta_1.1_spec-1.1.1.jar ./szz_lib/lucene-core-3.6.2.jar linemod
+ el_lib/neo4j-cypher-compiler-1.9-2.0.3.jar ./szz_lib/neo4j-cypher
+ -compiler-2.0-2.0.3.jar ./szz_lib/opencsv-2.0.jar ./szz_lib/o
+ rg.apache.servicemix.bundles.jline-0.9.94_1.jar ./szz_lib/parboil
+ ed-core-1.1.6.jar ./szz_lib/parboiled-scala_2.10-1.1.6.jar linemo
+ del_lib/scala-library-2.10.4.jar ./szz_lib/neo4j-cypher-2.1.3.jar
+  ./szz_lib/neo4j-cypher-commons-2.1.3.jar ./szz_lib/neo4j-cyp
+ her-compiler-2.1-2.1.3.jar ./szz_lib/neo4j-graph-algo-2.1.3.jar l
+ inemodel_lib/neo4j-graph-matching-2.1.3.jar ./szz_lib/neo4j-jmx-2
+ .1.3.jar ./szz_lib/neo4j-kernel-2.1.3.jar ./szz_lib/neo4j-luc
+ ene-index-2.1.3.jar ./szz_lib/neo4j-primitive-collections-2.1.3.j
+ ar ./szz_lib/neo4j-shell-2.1.3.jar ./szz_lib/neo4j-udc-2.1.3.
+ jar ./szz_lib/server-api-2.1.3.jar ./szz_lib/javax.mail.jar
+Main-Class: br.ufrn.backhoe.repminer.miner.szz.SzzRdb
+

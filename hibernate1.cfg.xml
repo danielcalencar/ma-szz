@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+
+
+		<!-- Milestone local project -->
+		<property name="connection.driver_class">org.postgresql.Driver</property>
+		<property name="connection.url">jdbc:postgresql://localhost:5432/milestones</property>
+		<property name="connection.username">postgres</property>
+		<property name="connection.password">root</property>
+
+		<!-- JDBC connection pool (use the built-in) -->
+		<property name="c3p0.min_size">1</property>
+		<property name="c3p0.max_size">1</property>
+		<property name="c3p0.timeout">0</property>
+		<property name="c3p0.max_statements">0</property>
+		<property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+
+		<!-- SQL dialect -->
+		<!-- property name="dialect">org.hibernate.dialect.MySQLDialect</property -->
+		<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<!-- property name="dialect">org.hibernate.dialect.HSQLDialect</property -->
+
+		<!-- Enable Hibernate's automatic session context management -->
+		<property name="current_session_context_class">thread</property>
+
+		<!-- Disable the second-level cache -->
+		<property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+
+		<!-- Echo all executed SQL to stdout -->
+		<property name="show_sql">false</property>
+
+		<!-- Update the database schema on startup -->
+		<property name="hbm2ddl.auto">validate</property>
+
+		<!-- Drop and re-create the database schema on startup -->
+		<!-- property name="hbm2ddl.auto">create</property -->
+
+	</session-factory>
+
+</hibernate-configuration>
