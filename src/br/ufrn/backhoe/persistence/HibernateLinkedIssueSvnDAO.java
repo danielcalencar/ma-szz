@@ -191,4 +191,26 @@ public class HibernateLinkedIssueSvnDAO extends LinkedIssueSvnDAO {
 		return result;
 	}
 
+	public synchronized List<NodeDb> getOrigins(String id){
+		List<NodeDb> origins = new ArrayList<NodeDb>();
+		String sql = "select n.path, n.revision, n.linenumber, " +
+			"n.content, n.project, n.id from szz_nodes n inner join node_evolution ne " +
+			"on n.id = ne.id where ne.evolution = :id";
+		SQLQuery query = currentSession.createSQLQuery(sql);
+		query.setParameter("id",id);
+		List<Object[]> rows = (List<Object[]>) query.list();
+		String lastId = null;
+		for(Object[] row : rows){
+			String path = (String) row[0];
+			long revision = ((BigInteger) row[1]).longValue();
+			int linenumber = ((BigInteger) row[2]).intValue();
+			String content = (String) row[3];
+			String project = (String) row[4];
+			String idNode = (String) row[5];		
+			NodeDb node = new NodeDb(path, revision, linenumber, content, project, idNode);
+			origins.add(node);
+		}
+		return origins;
+	}
+
 }
