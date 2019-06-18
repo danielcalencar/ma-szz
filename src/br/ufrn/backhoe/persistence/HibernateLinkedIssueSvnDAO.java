@@ -177,4 +177,18 @@ public class HibernateLinkedIssueSvnDAO extends LinkedIssueSvnDAO {
 				bicode.getMissed(),bicode.getFurtherback());	       
 	}
 
+	public synchronized Date getReportingDateFromRevision(String revision){
+		String sql = " select ic.creationdate from linkedissuessvn lsvn inner join " + 
+			"issuecontents ic on lsvn.issuecode = ic.bug_id where lsvn.issuecode " + 
+        		" in (select max(ic2.bug_id) from issuecontents ic2 inner join " + 
+			" issuecontents_affectedversions iav on ic2.id = iav.issuecontents_id group by ic2.id) " + 
+			" and lsvn.revisionnumber = :revision";
+		log.info("trying to get reporting date");
+		SQLQuery query = currentSession.createSQLQuery(sql);
+		query.setParameter("revision",revision);
+		Date result = (Date) query.uniqueResult();
+		log.info("date gotten");
+		return result;
+	}
+
 }

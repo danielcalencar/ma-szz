@@ -22,4 +22,6 @@ public abstract class LinkedIssueSvnDAO extends AbstractDAO {
 
 	public abstract void insertBugIntroducingCode(BugIntroducingCode bicode);
 
+	public abstract Date getReportingDateFromRevision(String revision);
+
 }
