@@ -24,4 +24,6 @@ public abstract class LinkedIssueSvnDAO extends AbstractDAO {
 
 	public abstract Date getReportingDateFromRevision(String revision);
 
+	public abstract List<NodeDb> getOrigins(String id);
+	
 }
