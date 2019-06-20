@@ -144,7 +144,7 @@ public class FindBugIntroCodeWorkerRdb implements Runnable {
 			String sql = "insert into bugintroducingcode values (:param1,:param2, :param3, " + 
 				":param4, :param5, :param6, :param7)";
 			for(BugIntroducingCode bicode : bicodes ){
-				liDao.executeSQLWithSevenParams(sql,bicode.getLinenumber(),bicode.getPath(),
+				liDao.executeSQLWithParams(sql,bicode.getLinenumber(),bicode.getPath(),
 						bicode.getContent(),bicode.getRevision(),bicode.getFixRevision(),
 						bicode.getProject(), bicode.getSzzDate());
 			}
@@ -168,7 +168,7 @@ public class FindBugIntroCodeWorkerRdb implements Runnable {
 			List<Line> linesHunk = hunk.getContent();
 			for (Line line : linesHunk) {
 				if (isDeletion(line.getContent())) {
-					if (isComment(line.getContent().replaceFirst("\\-",""))
+					if (isCommentOrBlankLine(line.getContent().replaceFirst("\\-",""))
 						|| !isBlankLine(line.getContent())){//getting blank lines?
 						continue;
 					}

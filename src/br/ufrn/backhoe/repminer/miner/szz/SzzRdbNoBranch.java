@@ -17,7 +17,6 @@ import org.tmatesoft.svn.core.wc2.SvnDiff;
 import org.tmatesoft.svn.core.wc2.SvnOperationFactory;
 import org.tmatesoft.svn.core.wc2.SvnTarget;
 
-import br.ufrn.backhoe.persistence.CommitDAO;
 import br.ufrn.backhoe.persistence.LinkedIssueSvnDAO;
 import br.ufrn.backhoe.persistence.factory.FactoryDAO;
 import br.ufrn.backhoe.repminer.connector.Connector;
@@ -26,10 +25,7 @@ import br.ufrn.backhoe.repminer.enums.ConnectorType;
 import br.ufrn.backhoe.repminer.enums.DAOType;
 import br.ufrn.backhoe.repminer.factory.connector.SubversionConnectorFactory;
 import br.ufrn.backhoe.repminer.miner.Miner;
-import br.ufrn.backhoe.repminer.miner.strategy.FindFixBug;
-import br.ufrn.backhoe.repminer.miner.strategy.FindFixBugDatabase;
-import br.ufrn.backhoe.repminer.miner.strategy.FindFixBugFactory;
-import br.ufrn.backhoe.repminer.miner.szz.constants.SzzQueries;
+
 import br.ufrn.backhoe.repminer.miner.szz.model.BugIntroducingCode;
 import br.ufrn.backhoe.repminer.miner.szz.model.DiffHunk;
 import br.ufrn.backhoe.repminer.miner.szz.model.Line;
@@ -38,11 +34,7 @@ import br.ufrn.backhoe.repminer.miner.szz.model.LinkedRevision;
 import br.ufrn.backhoe.repminer.miner.szz.model.Project;
 import br.ufrn.backhoe.repminer.miner.szz.model.RelationTypes;
 import br.ufrn.backhoe.repminer.miner.szz.workers.ProjectAnnotationGraphBuilderRdbNoBranch;
-import br.ufrn.backhoe.repminer.model.Archive;
-import br.ufrn.backhoe.repminer.model.Commit;
-import br.ufrn.backhoe.repminer.model.CommitArchive;
-import br.ufrn.backhoe.repminer.model.IssueContents;
-import br.ufrn.backhoe.repminer.model.Path;
+
 import java.util.concurrent.Future;
 import br.ufrn.backhoe.repminer.miner.szz.workers.FindBugIntroCodeWorkerRdb;
 
@@ -141,11 +133,6 @@ public class SzzRdbNoBranch extends Miner {
 		if (findBugIntroducingChanges) {
 			findBugIntroducingChanges();
 		}
-	}
-
-	@Override
-
-	public void validateParameter() throws Exception {
 	}
 
 

@@ -42,7 +42,6 @@ import java.util.Comparator;
 import java.io.IOException;
 import br.ufrn.backhoe.repminer.miner.szz.model.BugIntroducingCode;
 import br.ufrn.backhoe.repminer.miner.szz.model.DiffHunk;
-import br.ufrn.backhoe.repminer.miner.szz.model.LineNode;
 import br.ufrn.backhoe.repminer.miner.szz.model.Line;
 import br.ufrn.backhoe.repminer.miner.szz.model.LineType;
 
@@ -196,7 +195,7 @@ public class FindBugIntroCodeWorker implements Runnable {
 		org.hibernate.Transaction tx = liDao.beginTransaction();
 		String sql = "insert into bugintroducingcode values (:param1,:param2, :param3, :param4, :param5, :param6)";
 		for(BugIntroducingCode bicode : bicodes ){
-			liDao.executeSQLWithSixParams(sql,bicode.getLinenumber(),bicode.getPath(),
+			liDao.executeSQLWithParams(sql,bicode.getLinenumber(),bicode.getPath(),
 					bicode.getContent(),bicode.getRevision(),bicode.getFixRevision(),
 					bicode.getProject());
 		}

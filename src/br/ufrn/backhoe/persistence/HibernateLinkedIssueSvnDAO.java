@@ -212,5 +212,23 @@ public class HibernateLinkedIssueSvnDAO extends LinkedIssueSvnDAO {
 		}
 		return origins;
 	}
+	
+	public synchronized NodeDb getExistingNode(String id){
+		String sql = "select * from szz_nodes where id = :id";
+		SQLQuery query = currentSession.createSQLQuery(sql);
+		query.setParameter("id",id);
+		Object[] obj = (Object[]) query.uniqueResult();
+		if(obj == null) {
+			return null;
+		}
+		String path = (String) obj[0];
+		long revision = ((BigInteger) obj[1]).longValue();
+		int linenumber = ((BigInteger) obj[2]).intValue();
+		String content = (String) obj[3];
+		String project = (String) obj[4];
+		String idNode = (String) obj[5];		
+		NodeDb node = new NodeDb(path, revision, linenumber, content, project, idNode);
+		return node;
+	}
 
 }

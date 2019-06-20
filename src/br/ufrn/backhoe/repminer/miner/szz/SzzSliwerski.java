@@ -110,9 +110,6 @@ public class SzzSliwerski extends Miner {
 		findBugIntroducingChanges();
 	}
 
-	@Override
-	public void validateParameter() throws Exception {
-		//nothing to do here
-	}
+
 }
 
